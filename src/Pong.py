@@ -15,13 +15,14 @@ from Paddle import *
 
 SCREEN_WIDTH = 1900
 SCREEN_HEIGHT = 1000
-PADDLE_WIDTH = SCREEN_WIDTH * 0.05
-PADDLE_HEIGHT = SCREEN_HEIGHT * 0.2
-BALL_WIDTH = SCREEN_WIDTH * 0.05
-BALL_HEIGHT = SCREEN_WIDTH * 0.05
+PADDLE_WIDTH = SCREEN_WIDTH * 0.03
+PADDLE_HEIGHT = SCREEN_HEIGHT * 0.25
+BALL_WIDTH = SCREEN_WIDTH * 0.03
+BALL_HEIGHT = SCREEN_WIDTH * 0.03
 
 WORLD = Rect(0.0,0.0,SCREEN_WIDTH,SCREEN_HEIGHT,0.0,0.0,Color(0.0,0.0,0.0))
-PLAYER_SPEED = 600.0
+PLAYER_SPEED = 1000.0
+BALL_SPEED = 500.0
 
 running: bool = True
 elapsed_time: float = 0.0
@@ -81,7 +82,7 @@ def reset(r: int):
     player1.p.y = (SCREEN_HEIGHT - PADDLE_HEIGHT) * 0.5
     player2.p.x = SCREEN_WIDTH - PADDLE_WIDTH
     player2.p.y = (SCREEN_HEIGHT - PADDLE_HEIGHT) * 0.5
-    ball.v = new_direction(300.0)
+    ball.v = new_direction(BALL_SPEED)
 
     if r==1:
         player2.points += 1
