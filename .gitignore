@@ -1,0 +1,13 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtuelle Umgebung
+.venv/
+
+# OS-Dateien
+.DS_Store
+Thumbs.db
+
+# Umgebungsvariablen
+.env

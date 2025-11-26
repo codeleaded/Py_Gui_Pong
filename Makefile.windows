@@ -1,0 +1,13 @@
+# === Makefile.windows ===
+
+PYI = python3
+SRC_DIR = src
+TARGET = $(SRC_DIR)/Pong.py
+
+exe:
+	sudo chmod 777 $(TARGET)
+	sudo $(PYI) $(TARGET)
+
+do: exe
+
+# === Makefile.windows ===
